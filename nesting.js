@@ -49,8 +49,17 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
-//Code Here
+let employeeUpdater = () => {
+  for (let i=0; i<employees.length; i++) {
+    if (employees[i].firstName === "Theo") {
+      employees.splice(i,1);
+    }
+    if (employees[i].firstName === "Lorie") {
+      employees[i].department = "HR";
+    }
+  }
+  return(employees);
+}
 
 
 
@@ -68,7 +77,9 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(){
+  return [...new Set(workplaceAccidents)];
+}
 
 
 
@@ -96,7 +107,8 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
+grumpyActivity = cat.catFriends[0].activities[1]
+fluffy2ndFriend = cat.catFriends[1].name
 var grumpyActivity;
 var fluffy2ndFriend;
 
@@ -137,15 +149,21 @@ var myCar = {
     2. Loop over the accidents array.
     3. Change atFaultForAccident from true to false.
 */
-
-//Code Here
+function recordCleaner(){
+  for(i=0;i<myCar.accidents.length;i++){
+     if(myCar.accidents[i].atFaultForAccident){
+        myCar.accidents[i].atFaultForAccident =false;
+      }
+    }
+    return myCar
+  }
 
 
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+let numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
@@ -157,6 +175,14 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
-
+function looper(){
+  for(let i = 0; i < numsArr.length; i++){
+      for(let n = 0; n < numsArr[i].length; n++){
+    if(numsArr[i][n] % 2 == 0){
+      numsArr[i][n] = "even"
+    }else{
+      numsArr[i][n] = "odd"
+    }
+    }
+  }
+}
